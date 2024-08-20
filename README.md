@@ -36,7 +36,7 @@ Y = np.vectorize(f)(X) + (0.5 - np.random.rand(200)) * 7
 go.Figure(data=px.scatter(x=X, y=Y, title='Исходные данные'))
 ```
 
-
+![Графиик](https://github.com/Cyber-Zhaba/Essence-of-gradient-descent/blob/master/newplot.png)
 
 Объявим функцию потерь. Это сумма квадратов ошибок. Таким образом, найдя минимум этой функции, мы найдём коэффициенты изначального полинома
 
@@ -71,6 +71,8 @@ line = go.Scatter(x=X, y=np.polyval(pred, X), mode="lines", name='Предска
 
 go.Figure(data=[scatter, line])
 ```
+
+![Графиик](https://github.com/Cyber-Zhaba/Essence-of-gradient-descent/blob/master/newplot1.png)
 
 
 ## Предсказание коэффициентов не полиномиальной функции
@@ -108,7 +110,7 @@ go.Figure(data=[go.Scatter(x=X, y=Y, name='Исходные данные', mode=
     Загаданные коэффициенты [73.45936868987789, 85.43404795659721, 59.40337172173047, 97.99520847747495]
     
 
-
+![Графиик](https://github.com/Cyber-Zhaba/Essence-of-gradient-descent/blob/master/newplot2.png)
 
 
 ```python
@@ -136,7 +138,7 @@ scatter2 = go.Scatter(x=X, y=f(*pred, X), mode="markers", name='Предсказ
 
 go.Figure(data=[scatter1, scatter2])
 ```
-
+![Графиик](https://github.com/Cyber-Zhaba/Essence-of-gradient-descent/blob/master/newplot11.png)
 
 На графике не видно исходных данных, так как они почти полностью совпадают с предсказанием
 
